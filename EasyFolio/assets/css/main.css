@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* White background for the entire website, including individual sections */
   --default-color: #000000; /* Black default text color used across the site */
   --heading-color: #000000; /* Black color for headings, subheadings and titles */
-  --accent-color: #000080; /* Navy accent color used for buttons, links, and other standout elements */
+  --accent-color: #355E3B; /* Navy green accent color used for buttons, links, and other standout elements */
   --surface-color: #ffffff; /* White surface color for boxed elements within sections */
   --contrast-color: #ffffff; /* Contrast color for text to ensure readability against accent and dark backgrounds */
 }
@@ -30,11 +30,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #000000;  /* Black default color for main navigation links */
-  --nav-hover-color: #000080; /* Navy color applied to navigation links on hover or when active */
+  --nav-hover-color: #355E3B; /* Navy green color applied to navigation links on hover or when active */
   --nav-mobile-background-color: #ffffff; /* White background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* White background color for dropdown items */
   --nav-dropdown-color: #000000; /* Black color for dropdown navigation links */
-  --nav-dropdown-hover-color: #000080; /* Navy color applied to dropdown links on hover */
+  --nav-dropdown-hover-color: #355E3B; /* Navy green color applied to dropdown links on hover */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
