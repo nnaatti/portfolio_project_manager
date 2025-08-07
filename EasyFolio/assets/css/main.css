@@ -968,6 +968,15 @@ section,
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills .skill-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .skills .skill-box h3 {
@@ -1002,6 +1011,22 @@ section,
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
+.resume .btn-download-cv {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
+}
+
+.resume .btn-download-cv:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  color: var(--contrast-color);
+}
+
 .resume .resume-wrapper .resume-block {
   margin-bottom: 3rem;
 }
