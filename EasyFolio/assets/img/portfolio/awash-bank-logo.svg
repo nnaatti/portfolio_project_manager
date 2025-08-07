@@ -1,4 +1,8 @@
 <svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="200" fill="white"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="48" fill="#6a0dad">Awash Bank</text>
+  <rect width="400" height="200" fill="#fff"/>
+  <g transform="translate(100,25) scale(1.2)">
+    <path d="M0 150 L50 0 L100 150 Z" fill="#4F2683"/>
+    <path d="M-20 150 C40 100 80 60 120 20" stroke="#F58220" stroke-width="18" fill="none"/>
+  </g>
+  <text x="200" y="175" font-family="Arial, sans-serif" font-size="36" fill="#4F2683" text-anchor="middle">Awash Bank</text>
 </svg>
