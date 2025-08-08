@@ -206,7 +206,7 @@
       e.preventDefault();
       const link = document.createElement('a');
       link.href = this.href;
-      link.setAttribute('download', '');
+      link.setAttribute('download', 'NatnaelBediluAmareResume-2 2 C.pdf');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
