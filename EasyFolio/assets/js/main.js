@@ -226,7 +226,14 @@
       const subject = encodeURIComponent(formData.get('subject'));
       const message = encodeURIComponent(formData.get('message'));
       const body = `${message}%0D%0A%0D%0AFrom:%20${name}%20<${email}>`;
-      window.location.href = `mailto:natnaelamare1314@gmail.com?subject=${subject}&body=${body}`;
+      const mailto = `mailto:natnaelamare1314@gmail.com?subject=${subject}&body=${body}`;
+      const tempLink = document.createElement('a');
+      tempLink.href = mailto;
+      tempLink.style.display = 'none';
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+      setTimeout(() => { window.location.reload(); }, 100);
     });
   }
 
