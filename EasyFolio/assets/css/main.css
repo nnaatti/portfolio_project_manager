@@ -939,26 +939,6 @@ section,
   color: var(--heading-color);
 }
 
-.about .signature {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.about .signature .signature-image {
-  max-width: 150px;
-}
-
-.about .signature .signature-info h4 {
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
-}
-
-.about .signature .signature-info p {
-  font-size: 0.875rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin: 0;
-}
 
 /*--------------------------------------------------------------
 # Skills Section
