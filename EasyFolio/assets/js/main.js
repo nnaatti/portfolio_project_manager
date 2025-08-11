@@ -181,7 +181,7 @@
 
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
-   */
+  */
   window.addEventListener('load', function(e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
@@ -196,6 +196,22 @@
       }
     }
   });
+
+  /**
+   * Force CV download without opening the PDF in the browser
+   */
+  const downloadCvBtn = document.querySelector('#download-cv');
+  if (downloadCvBtn) {
+    downloadCvBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const link = document.createElement('a');
+      link.href = this.href;
+      link.setAttribute('download', 'NatnaelBediluAmareResume-2 2 (1).pdf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
 
   /**
    * Navmenu Scrollspy
