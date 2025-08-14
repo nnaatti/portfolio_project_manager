@@ -181,7 +181,7 @@
 
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
-   */
+  */
   window.addEventListener('load', function(e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
@@ -196,6 +196,46 @@
       }
     }
   });
+
+  /**
+   * Force CV download without opening the PDF in the browser
+   */
+  const downloadCvBtn = document.querySelector('#download-cv');
+  if (downloadCvBtn) {
+    downloadCvBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const link = document.createElement('a');
+      link.href = this.href;
+      link.setAttribute('download', 'NatnaelBediluAmareResume-2 2 (1).pdf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
+
+  /**
+   * Send email using a mailto link when the contact form is submitted
+   */
+  const contactForm = document.querySelector('#contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(contactForm);
+      const name = encodeURIComponent(formData.get('name'));
+      const email = encodeURIComponent(formData.get('email'));
+      const subject = encodeURIComponent(formData.get('subject'));
+      const message = encodeURIComponent(formData.get('message'));
+      const body = `${message}%0D%0A%0D%0AFrom:%20${name}%20<${email}>`;
+      const mailto = `mailto:natnaelamare1314@gmail.com?subject=${subject}&body=${body}`;
+      const tempLink = document.createElement('a');
+      tempLink.href = mailto;
+      tempLink.style.display = 'none';
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+      setTimeout(() => { window.location.reload(); }, 100);
+    });
+  }
 
   /**
    * Navmenu Scrollspy
